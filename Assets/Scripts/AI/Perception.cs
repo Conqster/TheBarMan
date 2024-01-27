@@ -2,15 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Perception : MonoBehaviour
+public static class Perception
 {
-    [SerializeField, Range(0.0f, 10.0f)] private float visionLength = 2.0f;
-
-
-
-
-    public Rigidbody Vision()
+    public static List<Rigidbody> Vision(Rigidbody user, float visionLength, string target = "Character")
     {
-        return new Rigidbody();
+
+        List<Rigidbody> rigidbodies = new List<Rigidbody>();
+
+        RaycastHit[] hits = Physics.SphereCastAll(user.position, visionLength, -Vector3.up);
+
+        foreach (RaycastHit hit in hits)
+            if(hit.rigidbody !=  null && hit.collider.CompareTag("Character") && hit.rigidbody != user)
+                rigidbodies.Add(hit.rigidbody);
+
+        return rigidbodies;
     }
+
+
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static StateMachine;
+using static UnityEngine.GraphicsBuffer;
 
 
 [System.Serializable]
@@ -18,6 +19,7 @@ public enum SM_State
     None,
     Idle,
     WalkingAround,
+    Drinking,
     InCombat,
 }
 
@@ -40,12 +42,14 @@ public class StateMachine
 
     protected SM_Settings sm_settings;
     protected SM_State sm_state;
+    protected BrainOutput sm_output;
 
-    public StateMachine(SM_Settings setting)
+    public StateMachine(SM_Settings setting, BrainOutput output)
     {
         sm_name = "Base State";
         sm_event = SM_Event.Enter;
         sm_settings = setting;
+        sm_output = output;
     }
 
 
@@ -107,6 +111,7 @@ public class StateMachine
     /// </summary>
     protected virtual void Exit()
     {
+        sm_settings.child.localScale = new Vector3(1.0f, 1.0f, 1.0f);
         sm_event = SM_Event.Exit;
     }
 
@@ -126,6 +131,20 @@ public class StateMachine
 
     private StateMachine GetStateMachine() => this;
 
+    protected Rigidbody ClosestTarget(List<Rigidbody> targetList)
+    {
+        if (targetList.Count == 0)
+            return null;
+
+        Rigidbody target = targetList[0];
+
+        foreach (Rigidbody body in targetList)
+            if (Vector3.Distance(body.position, sm_settings.transform.position) <
+                Vector3.Distance(target.position, sm_settings.transform.position))
+                target = body;
+
+        return target;
+    }
 
 
 }

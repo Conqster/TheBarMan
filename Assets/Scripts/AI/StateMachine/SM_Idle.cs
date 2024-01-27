@@ -6,7 +6,7 @@ public class SM_Idle : StateMachine
 {
     private float m_IdleDuration = 3.0f;
 
-    public SM_Idle(SM_Settings setting) : base(setting)
+    public SM_Idle(SM_Settings setting, BrainOutput output) : base(setting, output)
     {
         sm_name = "Idle State";
         sm_event = SM_Event.Enter;
@@ -27,7 +27,7 @@ public class SM_Idle : StateMachine
     protected override void Update()
     {
         if (sm_duration > m_IdleDuration)
-            TriggerExit(new SM_WalkAround(sm_settings));
+            TriggerExit(new SM_WalkAround(sm_settings, sm_output));
 
 
         base.Update();

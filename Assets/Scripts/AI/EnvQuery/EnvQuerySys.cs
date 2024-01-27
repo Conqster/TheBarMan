@@ -85,7 +85,7 @@ public class EnvQuerySys : MonoBehaviour
 
         bool valid;
 
-        print("Printing: " + posts.Count);
+        //print("Printing: " + posts.Count);
 
         if(posts.Count < 0)
             GeneratePoints();
@@ -99,7 +99,7 @@ public class EnvQuerySys : MonoBehaviour
             valid = NavMesh.SamplePosition(post, out hit, samplePostRayLength, NavMesh.AllAreas);
 
             Debug.DrawRay(post, Vector3.down * samplePostRayLength, (valid) ? Color.red : Color.yellow, 5f);
-            print("Point " + post + " is " + valid);
+            //print("Point " + post + " is " + valid);
             temp.Add(post, valid);
         }
 

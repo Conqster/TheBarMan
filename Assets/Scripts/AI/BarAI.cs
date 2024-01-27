@@ -14,12 +14,13 @@ public class BarAI : MonoBehaviour
 
     [Header("State Machine Output Data")]
     [SerializeField] private StateMachineData SMData;
+    [SerializeField] private BrainOutput SMBrainOutput;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        barAI_SM = new SM_Idle(brainSetting);
+        barAI_SM = new SM_Idle(brainSetting, SMBrainOutput);
     }
 
     // Update is called once per frame
@@ -29,4 +30,10 @@ public class BarAI : MonoBehaviour
         barAI_SM = barAI_SM.Process();
         SMData = barAI_SM.GetStateMachineData();
     }
+
+
+    public SM_State GetState()
+    { return barAI_SM.GetStateMachineData().state; }
+
+    public BrainOutput GetBrainOutput() { return SMBrainOutput; }
 }
