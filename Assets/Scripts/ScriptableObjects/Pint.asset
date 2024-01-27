@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Pint
   m_EditorClassIdentifier: 
   DrinkObject: {fileID: 5909415730208462281, guid: b802f1f6eb9fed94da2b97786df5555d, type: 3}
+  EmptyDrink: {fileID: 4411370323143766407, guid: 9032354036f065a4698432883412f374, type: 3}
   drinkName: Beer
   statusEffects: 3
   fireType: 1

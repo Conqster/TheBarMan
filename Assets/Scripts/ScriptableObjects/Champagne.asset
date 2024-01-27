@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Champagne
   m_EditorClassIdentifier: 
   DrinkObject: {fileID: 4045117697770566518, guid: 23786a8a6030e6348a1caefbce551f62, type: 3}
+  EmptyDrink: {fileID: 7433264698402581375, guid: e8d58e6cef5a63d43a50bd138a1c28a8, type: 3}
   drinkName: Champagne
   statusEffects: 2
   fireType: 0

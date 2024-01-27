@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Martini
   m_EditorClassIdentifier: 
   DrinkObject: {fileID: 954041507137162981, guid: af765356ad3410f4b81f93fbe09c17c5, type: 3}
+  EmptyDrink: {fileID: 1324069340919886373, guid: 2675b9e44fd93344887af8a6b94f7f96, type: 3}
   drinkName: Espresso Martini
   statusEffects: 1
   fireType: 1

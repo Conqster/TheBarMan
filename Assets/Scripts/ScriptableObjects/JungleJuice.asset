@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: JungleJuice
   m_EditorClassIdentifier: 
   DrinkObject: {fileID: 4110767912489048045, guid: 46339bdc9e58ccd438c98540cc79bfed, type: 3}
+  EmptyDrink: {fileID: 6195347412662724291, guid: 6e950bd32ca25a748908481c3b818ae3, type: 3}
   drinkName: Jungle Juice
   statusEffects: 5
   fireType: 1

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Shot
   m_EditorClassIdentifier: 
   DrinkObject: {fileID: 9217633014861887816, guid: 896535f1b47050c4cb043d5356637750, type: 3}
+  EmptyDrink: {fileID: 6924013551958022497, guid: b432e747ecee9ff4db4699e4037b62dd, type: 3}
   drinkName: Shot
   statusEffects: 4
   fireType: 2

@@ -8,6 +8,7 @@ public class PlayerInteract : MonoBehaviour
     [SerializeField] Drinks Currentdrink;
     [SerializeField] PlayerStats CurrentplayerStats;
     [SerializeField] Animator animator;
+    [SerializeField] IInteractable interObj;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
@@ -30,6 +31,10 @@ public class PlayerInteract : MonoBehaviour
         {
             animator.SetBool("IsAttacking", false);
         }
+        if (stateInfo.IsName("Drink") && stateInfo.normalizedTime >= 0.95f)
+        {
+            animator.SetBool("IsDrinking", false);
+        }
     }
     private void InteractWithObjectInFront()
     {
@@ -46,6 +51,7 @@ public class PlayerInteract : MonoBehaviour
 
                     interactableObject.Pickup();
                     Currentdrink = hit.collider.GetComponent<DrinkData>().drink;
+                    interObj = interactableObject;
                     interactableObject.Destroy();
                 }
             }
@@ -54,7 +60,10 @@ public class PlayerInteract : MonoBehaviour
 
     private void ApplyEffect()
     {
+        animator.SetBool("IsDrinking", true);
         StatusEffects currentStatus = Currentdrink.statusEffects;
+        interObj.Consume();
+      
         print(Currentdrink.statusEffects);
          switch(currentStatus)
         {

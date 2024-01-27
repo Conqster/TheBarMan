@@ -5,6 +5,7 @@ using UnityEngine;
 public class Drinks : ScriptableObject
 {
     public GameObject DrinkObject;
+    public GameObject EmptyDrink;
    public string drinkName;
     public StatusEffects statusEffects;
     public FireType fireType;
