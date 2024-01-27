@@ -6,5 +6,6 @@ public class Drinks : ScriptableObject
 {
     public GameObject DrinkObject;
    public string drinkName;
-    
+    public StatusEffects statusEffects;
+    public FireType fireType;
 }
