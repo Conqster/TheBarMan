@@ -31,8 +31,9 @@ public class TimerStuff : MonoBehaviour
                 time -= Time.deltaTime;
             }
 
-            if (time == 0)
+            if (time <= 0)
             {
+                Debug.Log("next scene");
                 SceneManager.LoadScene("Club");
             }
     }
