@@ -8,9 +8,50 @@ public class PlayerStats : MonoBehaviour
     public float attackPower;
     public float defense;
     public float sobrietyLevel;
+    public float health;
 
-    public void ModifySpeed(float amount) { speed += amount; }
-    public void ModifyAttackPower(float amount) { attackPower += amount; }
-    public void ModifyDefense(float amount) { defense += amount; }
+    public void ModifySpeed(float amount) { speed += amount; print(speed); }
+    public void ModifyAttackPower(float amount) { attackPower += amount; print(attackPower); }
+    public void ModifyDefense(float amount) { defense += amount; print(defense); }
     public void ModifySobrietyLevel(float amount) { sobrietyLevel += amount; }
+
+    public void ModifyHealth(float amount) { health += amount; print(health); }
+
+    
+    public void JungleJuice(float amount)
+    {
+        health += amount;
+        defense += amount;
+        attackPower += amount;
+        speed += amount;    
+        sobrietyLevel += (amount + 20);
+    }
+    public void RandomBuff(float amount) {
+
+        int pickedVar = Random.Range(0, 4);
+          switch(pickedVar)
+        {
+                case 0:
+                speed += amount;
+                return;
+                case 1:
+                attackPower += amount;
+                return;
+                case 2:
+                defense += amount;
+                return;
+                case 3:
+                health += amount;
+                return;
+                case 4:
+
+                    default: return;
+        }  
+            
+    }
+
+    public void takeDamage(float damage)
+    {
+        health = (damage - defense);
+    }
 }

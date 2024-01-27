@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 09a15cfb81313a641b106a00c66c7189, type: 3}
-  m_Name: Whiskey
+  m_Name: JungleJuice
   m_EditorClassIdentifier: 
-  DrinkObject: {fileID: 867277933536341322, guid: cbdf507a20d98c4439b45b9972202d30, type: 3}
-  drinkName: 
-  statusEffects: 0
-  fireType: 0
+  DrinkObject: {fileID: 4110767912489048045, guid: 46339bdc9e58ccd438c98540cc79bfed, type: 3}
+  drinkName: Jungle Juice
+  statusEffects: 5
+  fireType: 1

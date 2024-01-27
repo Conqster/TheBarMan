@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 09a15cfb81313a641b106a00c66c7189, type: 3}
-  m_Name: Whiskey
+  m_Name: Shot
   m_EditorClassIdentifier: 
-  DrinkObject: {fileID: 0}
-  drinkName: 
-  statusEffects: 1
-  fireType: 0
+  DrinkObject: {fileID: 9217633014861887816, guid: 896535f1b47050c4cb043d5356637750, type: 3}
+  drinkName: Shot
+  statusEffects: 4
+  fireType: 2
