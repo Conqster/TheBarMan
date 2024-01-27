@@ -24,7 +24,7 @@ public class PlayerStats : MonoBehaviour
         defense += amount;
         attackPower += amount;
         speed += amount;    
-        sobrietyLevel += (amount + 20);
+        sobrietyLevel += (amount + 30);
     }
     public void RandomBuff(float amount) {
 

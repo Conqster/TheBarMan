@@ -7,6 +7,7 @@ public class PlayerInteract : MonoBehaviour
 
     [SerializeField] Drinks Currentdrink;
     [SerializeField] PlayerStats CurrentplayerStats;
+    [SerializeField] Animator animator;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
@@ -14,12 +15,22 @@ public class PlayerInteract : MonoBehaviour
             InteractWithObjectInFront();
         }
 
-        if(Input.GetMouseButtonDown(1)) 
+        if (Input.GetMouseButtonDown(1))
         {
             ApplyEffect();
         }
-    }
 
+        if (Input.GetMouseButtonDown(0))
+        {
+            Attack();
+        }
+
+        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+        if (stateInfo.IsName("swing") && stateInfo.normalizedTime >= 0.95f)
+        {
+            animator.SetBool("IsAttacking", false);
+        }
+    }
     private void InteractWithObjectInFront()
     {
         Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
@@ -73,5 +84,26 @@ public class PlayerInteract : MonoBehaviour
                 break;
             default: break;
         }
+    }
+
+
+    public void Attack()
+    {
+        Drinks attackDrink = Currentdrink;
+        switch(attackDrink.fireType) {
+
+            case FireType.Meele:
+                animator.SetBool("IsAttacking", true);
+                break;
+            case FireType.Projectile:
+                break;
+            case FireType.throwable:
+                break;
+        default : break;
+        
+
+        }
+        
+        
     }
 }
