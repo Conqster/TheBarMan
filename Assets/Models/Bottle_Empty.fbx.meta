@@ -3,7 +3,17 @@ guid: 6f2c5b45383aad44881aeef082747937
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GreenGlass
+    second: {fileID: 2100000, guid: e52c7762591739f44b871b0c09daf261, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Label
+    second: {fileID: 2100000, guid: f2339350d7962f04e91b14200f26529b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

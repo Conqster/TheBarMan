@@ -3,7 +3,22 @@ guid: 042d70f9b7ef0c84ab068dd76238720d
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ClearGlass
+    second: {fileID: 2100000, guid: 931fa9c2ae8a7a64bb2348f262b89e7b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EspressoMartini
+    second: {fileID: -8887563488235940386, guid: a34f9937fafc25141b8e9c4e091bb615, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Foam
+    second: {fileID: 2100000, guid: d8b6b34618d91304bbc6de27d03a8520, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

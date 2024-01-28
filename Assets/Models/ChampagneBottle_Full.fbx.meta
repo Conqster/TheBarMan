@@ -3,7 +3,22 @@ guid: 2592e71c11320eb4190d8e409d723c1f
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GreenGlass
+    second: {fileID: 2100000, guid: e52c7762591739f44b871b0c09daf261, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Label
+    second: {fileID: 2100000, guid: f2339350d7962f04e91b14200f26529b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LbDrink
+    second: {fileID: 2100000, guid: e00d9547a63fa9b438ed4bb56fd4b46f, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
