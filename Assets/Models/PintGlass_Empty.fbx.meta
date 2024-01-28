@@ -3,7 +3,12 @@ guid: 69f15d36e4e0d804580ae8512ce749a1
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ClearGlass
+    second: {fileID: 2100000, guid: 931fa9c2ae8a7a64bb2348f262b89e7b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

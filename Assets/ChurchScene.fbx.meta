@@ -3,7 +3,57 @@ guid: 14ca03c55e62bde43b91082dd53342e7
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BrownMat
+    second: {fileID: 2100000, guid: 3cdcd7a9aac89574d8059bb9a8f562c8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BrownMat.001
+    second: {fileID: 2100000, guid: 3cdcd7a9aac89574d8059bb9a8f562c8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cork
+    second: {fileID: 2100000, guid: 6c936ea7a5a61434da71c017345f8e40, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DeckTop
+    second: {fileID: 2100000, guid: b0071fb9b786b9544932dc2875b92b62, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Door.001
+    second: {fileID: 2100000, guid: 05e5d4eb7e0738143a71b6bccc264ab3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GreyMat
+    second: {fileID: 2100000, guid: 4619bea2c278a6e499ad27e6141df0bc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LightGreyMat
+    second: {fileID: 2100000, guid: 7c7f1399025759f4890cc8879f3b0d19, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LightGreyMat.001
+    second: {fileID: 2100000, guid: 7c7f1399025759f4890cc8879f3b0d19, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal
+    second: {fileID: 2100000, guid: b6d1897d530768e4b93c93ca7517fd1d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: StainedGlass
+    second: {fileID: 2100000, guid: d1c8877913c3cf5449e49cfe74f5e666, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
