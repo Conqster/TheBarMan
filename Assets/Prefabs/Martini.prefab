@@ -91,7 +91,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 465769750125073503, guid: af765356ad3410f4b81f93fbe09c17c5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.0072
+      value: -0.019
       objectReference: {fileID: 0}
     - target: {fileID: 465769750125073503, guid: af765356ad3410f4b81f93fbe09c17c5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -129,6 +129,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: EspressoMartini_Full Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 1602599504304680752, guid: af765356ad3410f4b81f93fbe09c17c5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 931fa9c2ae8a7a64bb2348f262b89e7b, type: 2}
+    - target: {fileID: 1602599504304680752, guid: af765356ad3410f4b81f93fbe09c17c5, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: -8887563488235940386, guid: a34f9937fafc25141b8e9c4e091bb615, type: 3}
+    - target: {fileID: 1602599504304680752, guid: af765356ad3410f4b81f93fbe09c17c5, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: -4028722806583029569, guid: a34f9937fafc25141b8e9c4e091bb615, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af765356ad3410f4b81f93fbe09c17c5, type: 3}
 --- !u!4 &1487333036664196312 stripped
