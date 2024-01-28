@@ -878,6 +878,10 @@ PrefabInstance:
       propertyPath: attackPower
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 628041005570710304, guid: a185b91c934ce4142b37da18f52c2a84, type: 3}
+      propertyPath: drunkslider
+      value: 
+      objectReference: {fileID: 681956433}
     - target: {fileID: 628041005570710308, guid: a185b91c934ce4142b37da18f52c2a84, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -888,7 +892,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 628041005570710308, guid: a185b91c934ce4142b37da18f52c2a84, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3.9988532
+      value: 5.8315277
       objectReference: {fileID: 0}
     - target: {fileID: 628041005570710308, guid: a185b91c934ce4142b37da18f52c2a84, type: 3}
       propertyPath: m_LocalScale.z
@@ -900,7 +904,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 628041005570710308, guid: a185b91c934ce4142b37da18f52c2a84, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.45000005
+      value: 1.62
       objectReference: {fileID: 0}
     - target: {fileID: 628041005570710308, guid: a185b91c934ce4142b37da18f52c2a84, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1170,6 +1174,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 72553900, y: 21.220673, z: 2.2346087}
   m_Center: {x: 35261092, y: 5.895332, z: 0.000000104603856}
+--- !u!114 &681956433 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4020918257558900923, guid: 1c3b795c68fd0ed4b8d2d427d79b1dc1, type: 3}
+  m_PrefabInstance: {fileID: 4020918256536748449}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0

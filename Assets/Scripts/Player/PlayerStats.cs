@@ -23,7 +23,7 @@ public class PlayerStats : MonoBehaviour
     }
     private void Update()
     {
-        //drunkslider.value = sobrietyLevel;
+        drunkslider.value = sobrietyLevel;
     }
     public void JungleJuice(float amount)
     {
