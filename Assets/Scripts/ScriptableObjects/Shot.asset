@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09a15cfb81313a641b106a00c66c7189, type: 3}
   m_Name: Shot
   m_EditorClassIdentifier: 
-  DrinkObject: {fileID: 919132149155446097, guid: f5d3e552911967c4fb27110707fe2018, type: 3}
-  EmptyDrink: {fileID: 919132149155446097, guid: 6b65793cee1661c44838ace46c77755e, type: 3}
+  DrinkObject: {fileID: 9217633014861887816, guid: 896535f1b47050c4cb043d5356637750, type: 3}
   drinkName: Shot
   statusEffects: 4
   fireType: 2

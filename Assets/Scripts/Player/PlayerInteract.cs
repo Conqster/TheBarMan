@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour
@@ -9,7 +8,6 @@ public class PlayerInteract : MonoBehaviour
     [SerializeField] Drinks Currentdrink;
     [SerializeField] PlayerStats CurrentplayerStats;
     [SerializeField] Animator animator;
-    [SerializeField] GameObject firepoint;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
@@ -88,6 +86,7 @@ public class PlayerInteract : MonoBehaviour
         }
     }
 
+
     public void Attack()
     {
         Drinks attackDrink = Currentdrink;
@@ -97,28 +96,8 @@ public class PlayerInteract : MonoBehaviour
                 animator.SetBool("IsAttacking", true);
                 break;
             case FireType.Projectile:
-                
                 break;
             case FireType.throwable:
-                GameObject drinkInstance = Instantiate(Currentdrink.DrinkObject, firepoint.transform);
-                // Create an instance of the drink in the scene
-                drinkInstance.SetActive(true);
-                //drinkInstance.gameObject.transform.parent = null;
-                drinkInstance.transform.localScale = new Vector3 (5f, 5f, 5f);
-                drinkInstance.AddComponent<BoxCollider>();
-                // Add Rigidbody and apply force
-                Rigidbody rb = drinkInstance.AddComponent<Rigidbody>();
-
-                Vector3 forceDirection = firepoint.transform.forward;
-                //Vector3 forceDirection = Camera.main.transform.forward; // Get the forward direction of the camera
-               
-                rb.isKinematic = false;
-                // Adjust the force to be smaller for a slower projectile
-                float forceMagnitude = CurrentplayerStats.attackPower;
-                forceDirection.y = 0;
-                rb.AddForce(forceMagnitude * forceDirection, ForceMode.Impulse);
-                
-                Currentdrink = null;
                 break;
         default : break;
         
