@@ -31,6 +31,17 @@ public class PlayerInteract : MonoBehaviour
         if (stateInfo.IsName("swing") && stateInfo.normalizedTime >= 0.95f)
         {
             animator.SetBool("IsAttacking", false);
+            Currentdrink = null;
+        }
+        if (stateInfo.IsName("drink") && stateInfo.normalizedTime >= 0.95f)
+        {
+            animator.SetBool("isDrinking", false);
+        }
+
+        if(Currentdrink == null)
+        {
+            GameObject local = firepoint.transform.GetChild(0).gameObject;
+            Destroy(local);
         }
     }
     private void InteractWithObjectInFront()
@@ -56,6 +67,7 @@ public class PlayerInteract : MonoBehaviour
 
     private void ApplyEffect()
     {
+        animator.SetBool("isDrinking", true);
         StatusEffects currentStatus = Currentdrink.statusEffects;
         print(Currentdrink.statusEffects);
          switch(currentStatus)
@@ -95,32 +107,34 @@ public class PlayerInteract : MonoBehaviour
 
             case FireType.Meele:
                 animator.SetBool("IsAttacking", true);
+                
                 break;
             case FireType.Projectile:
                 
                 break;
             case FireType.throwable:
-                GameObject drinkInstance = Instantiate(Currentdrink.DrinkObject, firepoint.transform.position, firepoint.transform.rotation);
+                GameObject drinkInstance = Instantiate(Currentdrink.DrinkObject, firepoint.transform);
+                Debug.Log(drinkInstance.transform.position);
                 drinkInstance.SetActive(true);
 
                 // Set the scale if necessary
-                drinkInstance.transform.localScale = new Vector3(5f, 5f, 5f);
+                //drinkInstance.transform.localScale = new Vector3(5f, 5f, 5f);
 
                 // Add the collider and rigidbody
                 drinkInstance.AddComponent<BoxCollider>();
                 Rigidbody rb = drinkInstance.AddComponent<Rigidbody>();
+                drinkInstance.transform.parent = null;  
                 rb.isKinematic = false;
 
                 // Use the firepoint's forward direction for the force and neutralize the y component to avoid shooting downwards
                 Vector3 forceDirection = firepoint.transform.forward;
 
-                // Adjust the force magnitude to control the speed of the projectile
-                // You might need to tweak this value to get the desired speed
+                
                 float forceMagnitude = CurrentplayerStats.attackPower;
 
                 // Apply the force to the Rigidbody to propel it forward
                 rb.AddForce(forceMagnitude * forceDirection, ForceMode.Impulse);
-
+                
                 // Clear the current drink
                 Currentdrink = null;
                 break;

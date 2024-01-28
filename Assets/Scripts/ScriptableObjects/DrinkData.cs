@@ -15,7 +15,13 @@ public class DrinkData : MonoBehaviour, IInteractable
         //SpawnedDrink.transform.localScale += new Vector3(ScaleFactor-0.4f, ScaleFactor - 0.4f, ScaleFactor - 0.4f);
         holder = GameObject.FindWithTag("Holder");
     }
-
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Character"))
+        {
+            Destroy(gameObject);
+        }
+    }
     public void Consume()
     {
         Destroy(currObj);
@@ -28,7 +34,8 @@ public class DrinkData : MonoBehaviour, IInteractable
     {
         Debug.Log("Pickup method called on " + gameObject.name);
         GameObject spawnedObj = Instantiate(drink.DrinkObject, holder.transform);
-        spawnedObj.transform.localScale -= new Vector3(ScaleFactor, ScaleFactor, ScaleFactor);
+        spawnedObj.transform.position = spawnedObj.transform.parent.position;
+       //spawnedObj.transform.localScale -= new Vector3(ScaleFactor, ScaleFactor, ScaleFactor);
         currObj = spawnedObj;
     }
 
