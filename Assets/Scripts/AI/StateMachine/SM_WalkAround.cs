@@ -40,7 +40,7 @@ public class SM_WalkAround : StateMachine
 
         drinkingDecision = Random.Range(0.5f, 2.0f);
 
-        Debug.Log("Drinking decision: " + drinkingDecision);
+        //Debug.Log("Drinking decision: " + drinkingDecision);
 
         base.Enter();
     }
@@ -58,9 +58,19 @@ public class SM_WalkAround : StateMachine
         else
             detectTimer = 0.0f;
 
+
+
+
         //probalbly change to player 
         if(detectTimer > drinkingDecision)
-            TriggerExit(new SM_Drinking(sm_settings, sm_output, ClosestTarget(enemies).position));
+        {
+            if (sm_settings.ACoord.CanIAttack(sm_settings.barAI))
+            {
+                TriggerExit(new SM_Drinking(sm_settings, sm_output, sm_settings.player.position));
+            }
+            else
+                TriggerExit(new SM_Drinking(sm_settings, sm_output, ClosestTarget(enemies).position));
+        }
 
 
         //if (sm_settings.agent.remainingDistance < 2.0f)
@@ -77,10 +87,7 @@ public class SM_WalkAround : StateMachine
 
     protected override void Exit() 
     {
-        //if (sm_settings.agent.hasPath)
-        //{
-        //    sm_settings.agent.ResetPath();
-        //}
+        sm_settings.ACoord.RemoveMe(sm_settings.barAI);
         sm_output.walking = false;
         base.Exit(); 
     }

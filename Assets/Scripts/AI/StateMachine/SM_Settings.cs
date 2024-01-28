@@ -29,6 +29,9 @@ public class SM_Settings
     [SerializeField] public Rigidbody rb;
     [SerializeField] public Transform transform;
     [SerializeField] public Transform child;
+    [SerializeField] public AttackCoordinator ACoord;
+    [SerializeField] public BarAI barAI;
+    [SerializeField] public Rigidbody player;
 
 }
 
@@ -40,4 +43,7 @@ public class BrainOutput
     [SerializeField] public bool attacking = false;
     [SerializeField] public bool inCombat = false;
     [SerializeField] public bool drinking = false;
+    [SerializeField] public float attackCooldown = 3.0f;
+    [SerializeField] public bool canAttackPlayer;
+    [SerializeField] public Rigidbody currentTarget;
 }

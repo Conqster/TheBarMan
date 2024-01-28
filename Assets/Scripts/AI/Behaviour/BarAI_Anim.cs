@@ -57,4 +57,20 @@ public class BarAI_Anim : MonoBehaviour
 
         //animator.Play(animator.GetCurrentAnimatorStateInfo(0).fullPathHash, -1, 0f);
     }
+
+
+
+    public void AttackDamage(BarAI attackee)
+    {
+
+        //if can attack player only damage player 
+
+        if(barAI.GetBrainOutput().canAttackPlayer)
+            attackee.GetHealthSystem().DealDamage(barAI.GetHealthSystem().damageValue);
+    }
+
+    public void AttackDamage(PlayerStats stats) 
+    {
+        stats.takeDamage(barAI.GetHealthSystem().playerDamage);
+    }
 }

@@ -54,6 +54,10 @@ public class SM_Drinking : StateMachine
     {
         sm_output.drinking = false;
         sm_settings.agent.isStopped = false;
+
+        sm_settings.ACoord.CanIAttack(sm_settings.barAI);
+
+
         base.Exit();
     }
 
