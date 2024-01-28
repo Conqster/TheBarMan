@@ -100,24 +100,28 @@ public class PlayerInteract : MonoBehaviour
                 
                 break;
             case FireType.throwable:
-                GameObject drinkInstance = Instantiate(Currentdrink.DrinkObject, firepoint.transform);
-                // Create an instance of the drink in the scene
+                GameObject drinkInstance = Instantiate(Currentdrink.DrinkObject, firepoint.transform.position, firepoint.transform.rotation);
                 drinkInstance.SetActive(true);
-                //drinkInstance.gameObject.transform.parent = null;
-                drinkInstance.transform.localScale = new Vector3 (5f, 5f, 5f);
-                drinkInstance.AddComponent<BoxCollider>();
-                // Add Rigidbody and apply force
-                Rigidbody rb = drinkInstance.AddComponent<Rigidbody>();
 
-                Vector3 forceDirection = firepoint.transform.forward;
-                //Vector3 forceDirection = Camera.main.transform.forward; // Get the forward direction of the camera
-               
+                // Set the scale if necessary
+                drinkInstance.transform.localScale = new Vector3(5f, 5f, 5f);
+
+                // Add the collider and rigidbody
+                drinkInstance.AddComponent<BoxCollider>();
+                Rigidbody rb = drinkInstance.AddComponent<Rigidbody>();
                 rb.isKinematic = false;
-                // Adjust the force to be smaller for a slower projectile
+
+                // Use the firepoint's forward direction for the force and neutralize the y component to avoid shooting downwards
+                Vector3 forceDirection = firepoint.transform.forward;
+
+                // Adjust the force magnitude to control the speed of the projectile
+                // You might need to tweak this value to get the desired speed
                 float forceMagnitude = CurrentplayerStats.attackPower;
-                forceDirection.y = 0;
+
+                // Apply the force to the Rigidbody to propel it forward
                 rb.AddForce(forceMagnitude * forceDirection, ForceMode.Impulse);
-                
+
+                // Clear the current drink
                 Currentdrink = null;
                 break;
         default : break;

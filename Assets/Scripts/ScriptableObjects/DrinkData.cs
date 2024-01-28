@@ -11,8 +11,9 @@ public class DrinkData : MonoBehaviour, IInteractable
 
     private void Start()
     {
-       //GameObject SpawnedDrink =  Instantiate(drink.DrinkObject, gameObject.transform);
+        //GameObject SpawnedDrink =  Instantiate(drink.DrinkObject, gameObject.transform);
         //SpawnedDrink.transform.localScale += new Vector3(ScaleFactor-0.4f, ScaleFactor - 0.4f, ScaleFactor - 0.4f);
+        holder = GameObject.FindWithTag("Holder");
     }
 
     public void Consume()
