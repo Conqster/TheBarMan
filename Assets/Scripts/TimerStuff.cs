@@ -34,7 +34,7 @@ public class TimerStuff : MonoBehaviour
             if (time <= 0)
             {
                 Debug.Log("next scene");
-                SceneManager.LoadScene("Club");
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
             }
     }
 }

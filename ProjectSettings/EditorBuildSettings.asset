@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Bar.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Club.unity
+    guid: 1d3c7f1ab42446c48a788ea1c4a66356
+  - enabled: 1
+    path: Assets/Scenes/Church.unity
+    guid: e538d8f050c91e044a6f553ad6ac54ee
   m_configObjects: {}
