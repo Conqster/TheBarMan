@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour
@@ -8,6 +9,7 @@ public class PlayerInteract : MonoBehaviour
     [SerializeField] Drinks Currentdrink;
     [SerializeField] PlayerStats CurrentplayerStats;
     [SerializeField] Animator animator;
+    [SerializeField] GameObject firepoint;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
@@ -86,7 +88,6 @@ public class PlayerInteract : MonoBehaviour
         }
     }
 
-
     public void Attack()
     {
         Drinks attackDrink = Currentdrink;
@@ -96,8 +97,32 @@ public class PlayerInteract : MonoBehaviour
                 animator.SetBool("IsAttacking", true);
                 break;
             case FireType.Projectile:
+                
                 break;
             case FireType.throwable:
+                GameObject drinkInstance = Instantiate(Currentdrink.DrinkObject, firepoint.transform.position, firepoint.transform.rotation);
+                drinkInstance.SetActive(true);
+
+                // Set the scale if necessary
+                drinkInstance.transform.localScale = new Vector3(5f, 5f, 5f);
+
+                // Add the collider and rigidbody
+                drinkInstance.AddComponent<BoxCollider>();
+                Rigidbody rb = drinkInstance.AddComponent<Rigidbody>();
+                rb.isKinematic = false;
+
+                // Use the firepoint's forward direction for the force and neutralize the y component to avoid shooting downwards
+                Vector3 forceDirection = firepoint.transform.forward;
+
+                // Adjust the force magnitude to control the speed of the projectile
+                // You might need to tweak this value to get the desired speed
+                float forceMagnitude = CurrentplayerStats.attackPower;
+
+                // Apply the force to the Rigidbody to propel it forward
+                rb.AddForce(forceMagnitude * forceDirection, ForceMode.Impulse);
+
+                // Clear the current drink
+                Currentdrink = null;
                 break;
         default : break;
         

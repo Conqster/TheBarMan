@@ -1,9 +1,109 @@
 fileFormatVersion: 2
 guid: afcfe3834005db946956e442a7d78074
 ModelImporter:
-  serializedVersion: 22200
+  serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BlackMat
+    second: {fileID: 2100000, guid: f41e2438f820977479259e0331965c17, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BrownMat.001
+    second: {fileID: 2100000, guid: 3cdcd7a9aac89574d8059bb9a8f562c8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Buttons.001
+    second: {fileID: 2100000, guid: d0dc8a1b18afba943a1e2ea2600c6f6b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CloudyGlass
+    second: {fileID: 2100000, guid: 6f2f5c5712c81784d85a1ca3bff9355d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ClubFloor
+    second: {fileID: 2100000, guid: 959543ee609a24940826ace96b1354ff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ClubWalls
+    second: {fileID: 2100000, guid: 7d8b444890d284242808b2bb671ac334, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cork
+    second: {fileID: 2100000, guid: 6c936ea7a5a61434da71c017345f8e40, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DanceFloorMat
+    second: {fileID: 2100000, guid: 8fd57c8f08ee5934c864c76fd06d4005, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Deck
+    second: {fileID: 2100000, guid: 544f72d46bfa8064bbfe7ad73d19695d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DeckTop
+    second: {fileID: 2100000, guid: b0071fb9b786b9544932dc2875b92b62, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DjDeckBase
+    second: {fileID: 2100000, guid: 681cb0f6e0328254da601cb2a1eb6ca2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Door.001
+    second: {fileID: 2100000, guid: 05e5d4eb7e0738143a71b6bccc264ab3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: JukeBoxMain.001
+    second: {fileID: 2100000, guid: d2dfaf3ec894eff4dbb298074d105541, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LightGreyMat.001
+    second: {fileID: 2100000, guid: 7c7f1399025759f4890cc8879f3b0d19, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal
+    second: {fileID: 2100000, guid: b6d1897d530768e4b93c93ca7517fd1d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pannel.001
+    second: {fileID: 2100000, guid: 1f4da181264d7a34bbbe40ebccabe668, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Record_Misc
+    second: {fileID: 2100000, guid: 6b9c360d72108ec4e977c7211269a45b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rim.001
+    second: {fileID: 2100000, guid: 2f20c6b717b620841adb4ae28a64d01e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Screen
+    second: {fileID: 2100000, guid: 7db5b2cb1737c9c4a8d9bb46f4684919, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Screen.001
+    second: {fileID: 2100000, guid: 7db5b2cb1737c9c4a8d9bb46f4684919, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -40,7 +140,6 @@ ModelImporter:
     addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
-    importPhysicalCameras: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -68,7 +167,6 @@ ModelImporter:
     secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
-    strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -101,7 +199,6 @@ ModelImporter:
   humanoidOversampling: 1
   avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
-  importBlendShapeDeformPercent: 1
   remapMaterialsIfMaterialImportModeIsNone: 0
   additionalBone: 0
   userData: 
