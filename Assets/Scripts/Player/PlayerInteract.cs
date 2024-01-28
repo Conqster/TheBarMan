@@ -10,6 +10,7 @@ public class PlayerInteract : MonoBehaviour
     [SerializeField] PlayerStats CurrentplayerStats;
     [SerializeField] Animator animator;
     [SerializeField] GameObject firepoint;
+    [SerializeField] GameObject Cork;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
@@ -40,8 +41,17 @@ public class PlayerInteract : MonoBehaviour
 
         if(Currentdrink == null)
         {
-            GameObject local = firepoint.transform.GetChild(0).gameObject;
-            Destroy(local);
+            if(firepoint.transform.childCount > 0 )
+            {
+                GameObject local = firepoint.transform.GetChild(0).gameObject;
+                if (local != null)
+                {
+                    Destroy(local);
+                }
+            }
+            
+            
+            
         }
     }
     private void InteractWithObjectInFront()
@@ -110,7 +120,12 @@ public class PlayerInteract : MonoBehaviour
                 
                 break;
             case FireType.Projectile:
-                
+                firepoint.transform.rotation = Quaternion.Euler(90, 0, 0);
+                GameObject cork = Instantiate(Cork, firepoint.transform);
+                cork.AddComponent<BoxCollider>();
+                cork.AddComponent<Rigidbody>();
+                cork.gameObject.GetComponent<Rigidbody>().AddForce(30*firepoint.transform.up, ForceMode.Impulse);
+                Currentdrink = null;
                 break;
             case FireType.throwable:
                 GameObject drinkInstance = Instantiate(Currentdrink.DrinkObject, firepoint.transform);

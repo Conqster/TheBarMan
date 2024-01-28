@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -9,15 +10,21 @@ public class PlayerStats : MonoBehaviour
     public float defense;
     public float sobrietyLevel;
     public float health;
-
+    public Slider drunkslider;
     public void ModifySpeed(float amount) { speed += amount; print(speed); }
     public void ModifyAttackPower(float amount) { attackPower += amount; print(attackPower); }
     public void ModifyDefense(float amount) { defense += amount; print(defense); }
     public void ModifySobrietyLevel(float amount) { sobrietyLevel += amount; }
 
     public void ModifyHealth(float amount) { health += amount; print(health); }
-
-    
+    private void Start()
+    {
+       
+    }
+    private void Update()
+    {
+        //drunkslider.value = sobrietyLevel;
+    }
     public void JungleJuice(float amount)
     {
         health += amount;
