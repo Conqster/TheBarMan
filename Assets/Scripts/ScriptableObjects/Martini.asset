@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09a15cfb81313a641b106a00c66c7189, type: 3}
+  m_Name: Martini
+  m_EditorClassIdentifier: 
+  DrinkObject: {fileID: 954041507137162981, guid: af765356ad3410f4b81f93fbe09c17c5, type: 3}
+  drinkName: Espresso Martini
+  statusEffects: 1
+  fireType: 1

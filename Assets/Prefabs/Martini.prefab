@@ -1,0 +1,138 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1356338416750719345
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1356338416750719350}
+  - component: {fileID: 1356338416750719351}
+  - component: {fileID: 1356338416750719344}
+  m_Layer: 0
+  m_Name: Martini
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1356338416750719350
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356338416750719345}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.67, y: 1.0322, z: -1.3097}
+  m_LocalScale: {x: 5.4688544, y: 5.4688544, z: 5.4688544}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1487333036664196312}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1356338416750719351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356338416750719345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 925011089f41d304e9bae1ade8ee0e82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  holder: {fileID: 0}
+  drink: {fileID: 11400000, guid: 02a3477ec003d8f4ab0502adba5eb215, type: 2}
+  ScaleFactor: 1.07
+--- !u!65 &1356338416750719344
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356338416750719345}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.09653846, y: 0.14179882, z: 0.10021711}
+  m_Center: {x: -0.0028739276, y: 0.07040719, z: -0.00025559447}
+--- !u!1001 &1356338418371614855
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1356338416750719350}
+    m_Modifications:
+    - target: {fileID: 465769750125073503, guid: af765356ad3410f4b81f93fbe09c17c5, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 465769750125073503, guid: af765356ad3410f4b81f93fbe09c17c5, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 70.32293
+      objectReference: {fileID: 0}
+    - target: {fileID: 465769750125073503, guid: af765356ad3410f4b81f93fbe09c17c5, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 70.32293
+      objectReference: {fileID: 0}
+    - target: {fileID: 465769750125073503, guid: af765356ad3410f4b81f93fbe09c17c5, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 70.32293
+      objectReference: {fileID: 0}
+    - target: {fileID: 465769750125073503, guid: af765356ad3410f4b81f93fbe09c17c5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 465769750125073503, guid: af765356ad3410f4b81f93fbe09c17c5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0072
+      objectReference: {fileID: 0}
+    - target: {fileID: 465769750125073503, guid: af765356ad3410f4b81f93fbe09c17c5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 465769750125073503, guid: af765356ad3410f4b81f93fbe09c17c5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: 465769750125073503, guid: af765356ad3410f4b81f93fbe09c17c5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 465769750125073503, guid: af765356ad3410f4b81f93fbe09c17c5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 465769750125073503, guid: af765356ad3410f4b81f93fbe09c17c5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 465769750125073503, guid: af765356ad3410f4b81f93fbe09c17c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 465769750125073503, guid: af765356ad3410f4b81f93fbe09c17c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 465769750125073503, guid: af765356ad3410f4b81f93fbe09c17c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 954041507137162981, guid: af765356ad3410f4b81f93fbe09c17c5, type: 3}
+      propertyPath: m_Name
+      value: EspressoMartini_Full Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: af765356ad3410f4b81f93fbe09c17c5, type: 3}
+--- !u!4 &1487333036664196312 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 465769750125073503, guid: af765356ad3410f4b81f93fbe09c17c5, type: 3}
+  m_PrefabInstance: {fileID: 1356338418371614855}
+  m_PrefabAsset: {fileID: 0}
