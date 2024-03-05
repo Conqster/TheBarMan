@@ -9,7 +9,7 @@ public class Attack : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("Character"))
+        if(other.gameObject.CompareTag("Character") || other.gameObject.CompareTag("Player"))
         {
             if (other.TryGetComponent<BarAI>(out BarAI attackeeAI))
                 barAI_Anim.AttackDamage(attackeeAI);

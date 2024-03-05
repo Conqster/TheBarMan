@@ -6,7 +6,7 @@ using UnityEngine;
 public class HealthSystem
 {
     [Header("Self")]
-    [SerializeField, Range(0.0f, 10.0f)] public float currentHealth;
+    [SerializeField, Range(0.0f, 100.0f)] public float currentHealth;
     [SerializeField, Range(0.0f, 10.0f)] public float maxHealth;
 
 

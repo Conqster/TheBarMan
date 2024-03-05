@@ -19,6 +19,8 @@ public class BarAI : MonoBehaviour
     [SerializeField] private BrainOutput SMBrainOutput;
 
 
+    [SerializeField] private float wait = 3.0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,8 +30,14 @@ public class BarAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        barAI_SM = barAI_SM.Process();
-        SMData = barAI_SM.GetStateMachineData();
+        wait -= Time.deltaTime;
+
+        if(wait < 0)
+        {
+            barAI_SM = barAI_SM.Process();
+            SMData = barAI_SM.GetStateMachineData();
+        }
+
     }
 
 

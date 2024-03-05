@@ -19,8 +19,8 @@ public class SM_Settings
 
     [Header("Combat Data")]
     [SerializeField, Range(0.0f, 20.0f)] public float visionLength = 2.0f;
-    [SerializeField, Range(0.0f, 5.0f)] public float agentStoppingDistance = 0.2f;
-    [SerializeField, Range(0.0f, 5.0f)] public float attackDistance = 0.3f;
+    [SerializeField, Range(0.0f, 15.0f)] public float agentStoppingDistance = 0.2f;
+    [SerializeField, Range(0.0f, 15.0f)] public float attackDistance = 0.3f;
     [SerializeField, Range(0.0f, 5.0f)] public float moveSpeed = 2.0f;
 
 

@@ -13,7 +13,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: EspressoMartini
-    second: {fileID: -8887563488235940386, guid: a34f9937fafc25141b8e9c4e091bb615, type: 3}
+    second: {fileID: 2100000, guid: f35d7e324dcc1e34fab8cef30e9c69f6, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule

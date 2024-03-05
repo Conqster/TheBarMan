@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: c0d6a91e9f2968c43a6eab1119ed23d7
 ModelImporter:
-  serializedVersion: 22200
+  serializedVersion: 21300
   internalIDToNameTable: []
   externalObjects:
   - first:
@@ -98,17 +98,17 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Rim
-    second: {fileID: 2100000, guid: 2f20c6b717b620841adb4ae28a64d01e, type: 2}
+    second: {fileID: 2100000, guid: 0a1e119ff59102049a2a5c93433e9b76, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Screen
-    second: {fileID: 2100000, guid: 7db5b2cb1737c9c4a8d9bb46f4684919, type: 2}
+    second: {fileID: 2100000, guid: bf5e7e49a4b0ec84d960a36e48baea2a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: ShotLiquid
-    second: {fileID: 2100000, guid: 1fd09df2b8d25c24b910dc7890340947, type: 2}
+    second: {fileID: 2100000, guid: 071f9beaac8670749a4485839c50ae32, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -145,7 +145,6 @@ ModelImporter:
     addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
-    importPhysicalCameras: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -173,7 +172,6 @@ ModelImporter:
     secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
-    strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -206,7 +204,6 @@ ModelImporter:
   humanoidOversampling: 1
   avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
-  importBlendShapeDeformPercent: 1
   remapMaterialsIfMaterialImportModeIsNone: 0
   additionalBone: 0
   userData: 

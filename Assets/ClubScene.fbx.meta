@@ -93,17 +93,17 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Rim.001
-    second: {fileID: 2100000, guid: 2f20c6b717b620841adb4ae28a64d01e, type: 2}
+    second: {fileID: 2100000, guid: 0a1e119ff59102049a2a5c93433e9b76, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Screen
-    second: {fileID: 2100000, guid: 7db5b2cb1737c9c4a8d9bb46f4684919, type: 2}
+    second: {fileID: 2100000, guid: bf5e7e49a4b0ec84d960a36e48baea2a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Screen.001
-    second: {fileID: 2100000, guid: 7db5b2cb1737c9c4a8d9bb46f4684919, type: 2}
+    second: {fileID: 2100000, guid: bf5e7e49a4b0ec84d960a36e48baea2a, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

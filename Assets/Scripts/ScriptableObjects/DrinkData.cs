@@ -15,10 +15,11 @@ public class DrinkData : MonoBehaviour, IInteractable
         //SpawnedDrink.transform.localScale += new Vector3(ScaleFactor-0.4f, ScaleFactor - 0.4f, ScaleFactor - 0.4f);
         holder = GameObject.FindWithTag("Holder");
     }
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Character"))
+        if (other.gameObject.CompareTag("Character"))
         {
+            other.gameObject.GetComponent<BarAI>().GetHealthSystem().DealDamage(10);
             Destroy(gameObject);
         }
     }
